@@ -1,7 +1,7 @@
 EntityManagerGeneratorBundle
 ============================
 
-[![Build Status](http://travis-ci.org/Kalyzee/EntityManagerGeneratorBundle.png)](http://travis-ci.org/#!/Kalyzee/EntityManagerGeneratorBundle)
+[![Build Status](https://travis-ci.org/Kalyzee/EntityManagerGeneratorBundle.png?branch=master)](http://travis-ci.org/#!/Kalyzee/EntityManagerGeneratorBundle)
 
 Entity Manager Generator for Symfony 2 
 
