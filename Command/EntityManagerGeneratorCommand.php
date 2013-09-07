@@ -34,10 +34,16 @@ class EntityManagerGeneratorCommand extends ContainerAwareCommand
     	
     	$writerFactory->registerWriter(new XmlConfigWriter());
     	
-        $entity = $input->getArgument('entity');
+        $entityFullName = $input->getArgument('entity');
         $writerType = "xml";
 		
-        $arrayResult = explode(":", $entity);
+        $arrayResult = explode(":", $entityFullName);
+        
+        $namespaceSimplified = $arrayResult[0];
+        $entity = $arrayResult[1];
+        $serviceName = $this->camelCase(str_replace("Bundle", ".", $namespaceSimplified).lcfirst($entity).self::$ENTITY_MANAGER_SUFFIX);
+        
+        
         if (sizeof($arrayResult) == 2){
         	
         	$kernel = $this->getContainer()->get('kernel');
@@ -51,7 +57,7 @@ class EntityManagerGeneratorCommand extends ContainerAwareCommand
         	$servicePath = $kernel->locateResource("@".$arrayResult[0]."/Resources/config/services.".$writerType);
         	
         	$this->createClass($arrayResult[1], $arrayResult[1].self::$ENTITY_MANAGER_SUFFIX, $namespace."\\".self::$ENTITY_FOLDER, $path."/entity/".$arrayResult[1].self::$ENTITY_MANAGER_SUFFIX.".php");
-        	$writerFactory->createWriterFor($writerType)->appendService($namespace."\\".self::$ENTITY_FOLDER."\\".$arrayResult[1].self::$ENTITY_MANAGER_SUFFIX, $this->camelCase($entity.self::$ENTITY_MANAGER_SUFFIX), $servicePath);
+        	$writerFactory->createWriterFor($writerType)->appendService($namespace."\\".self::$ENTITY_FOLDER."\\".$arrayResult[1].self::$ENTITY_MANAGER_SUFFIX, $serviceName, $servicePath);
         	
         	
         	$output->writeln("Your entity manager is created");
