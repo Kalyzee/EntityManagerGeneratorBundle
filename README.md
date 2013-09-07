@@ -26,7 +26,7 @@ Update your AppKernel File :
 ```
 $bundles = array(
 ...
-new Activpik\ManagerBundle\ActivpikManagerBundle(),
+new Activpik\EntityManagerGeneratorBundle\ActivpikEntityManagerGeneratorBundle(),
 ...
 );
 ```
