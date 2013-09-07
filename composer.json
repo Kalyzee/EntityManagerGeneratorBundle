@@ -11,11 +11,10 @@
         }
     ],
     "require": {
-        "symfony/framework-bundle": "2.*",
+        "symfony/framework-bundle": "2.*"
     },
     "autoload": {
         "psr-0": { "Activpik\\EntityManagerGeneratorBundle": "" }
     },
-    "target-dir": "Activpik/EntityManagerGeneratorBundle"
-        
+    "target-dir": "Activpik/EntityManagerGeneratorBundle"        
 }
