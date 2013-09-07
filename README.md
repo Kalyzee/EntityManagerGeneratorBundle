@@ -1,6 +1,8 @@
 EntityManagerGeneratorBundle
 ============================
 
+[![Build Status](http://travis-ci.org/Kalyzee/EntityManagerGeneratorBundle.png)](http://travis-ci.org/#!/Kalyzee/EntityManagerGeneratorBundle)
+
 Entity Manager Generator for Symfony 2 
 
 Works only with bundles with a services.xml config file. Next release will support the other format. 
