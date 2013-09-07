@@ -1,0 +1,21 @@
+{
+    "name": "activpik/entity-manager-generator-bundle",
+    "description": "Entity Manager Generator bundle for Symfony 2",
+    "keywords": ["Entity Manager","Doctrine"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ludovic Bouguerra",
+            "email": "ludovic.bouguerra@kalyzee.com"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "2.*",
+    },
+    "autoload": {
+        "psr-0": { "Activpik\\EntityManagerGeneratorBundle": "" }
+    },
+    "target-dir": "Activpik/EntityManagerGeneratorBundle"
+        
+}
