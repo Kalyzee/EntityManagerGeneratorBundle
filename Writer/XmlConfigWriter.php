@@ -46,7 +46,7 @@ class XmlConfigWriter implements IWriter {
 		if ($elements->length == 0) {
 			//-- In
 			$baseNode = $domDocument->createElement($nodeName);
-			$containerElement->appendChild($parametersElement);
+			$containerElement->appendChild($baseNode);
 		} else {
 			$baseNode = $elements->item(0);
 		}
